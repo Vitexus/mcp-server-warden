@@ -33,3 +33,14 @@ Description: Vaultwarden/Bitwarden MCP server for AI agents
  agents, or in stdio mode for direct integration with desktop MCP hosts
  such as Claude Code or Cursor. The Bitwarden CLI (bw) must be available
  on PATH or its path set via the BW_BIN environment variable.
+
+Package: mcprack-mcp-server-warden
+Architecture: all
+Depends:
+ ${misc:Depends},
+ mcprack (>= 1.5.1),
+ warden-mcp (= ${binary:Version}),
+Description: Registers Vaultwarden/Bitwarden MCP server into mcprack catalog
+ Companion package for warden-mcp. Installing it registers the
+ warden-mcp binary (stdio mode) as an available MCP server in the
+ local mcprack instance; removing it unregisters it again.
