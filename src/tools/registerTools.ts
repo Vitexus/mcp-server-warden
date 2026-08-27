@@ -75,7 +75,28 @@ export function registerTools(server: McpServer, deps: RegisterToolsDeps) {
     return false;
   }
 
-  const isReadOnly = parseBoolEnv('READONLY', 'KEYCHAIN_READONLY');
+  // Fail-closed: read-only unless explicitly disabled with a falsy value
+  // (e.g. READONLY=false). Unset defaults to read-only, since this server
+  // manages a password vault.
+  function parseBoolEnvDefaultTrue(...names: string[]): boolean {
+    for (const name of names) {
+      const v = process.env[name];
+      if (v !== undefined) {
+        const lower = v.trim().toLowerCase();
+        if (
+          lower === '0' ||
+          lower === 'false' ||
+          lower === 'no' ||
+          lower === 'off'
+        )
+          return false;
+        return true;
+      }
+    }
+    return true;
+  }
+
+  const isReadOnly = parseBoolEnvDefaultTrue('READONLY', 'KEYCHAIN_READONLY');
   const isNoReveal = parseBoolEnv('NOREVEAL', 'KEYCHAIN_NOREVEAL');
   const textCompatMode =
     process.env.KEYCHAIN_TEXT_COMPAT_MODE?.trim().toLowerCase();

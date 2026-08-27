@@ -209,8 +209,18 @@ const OPEN_WORLD_TOOL_NAMES = new Set([
 // ---------------------------------------------------------------------------
 
 async function startTestServer(envOverrides?: Record<string, string>) {
+  // READONLY now defaults to true (fail-closed); most of this file's tests
+  // register/call mutating tools and were written against the old
+  // writable-by-default behavior, so give them that baseline here unless a
+  // test explicitly overrides READONLY itself (e.g. the READONLY-behavior
+  // describe blocks below, whose overrides win via the merge order).
+  const merged: Record<string, string> = {
+    READONLY: 'false',
+    ...(envOverrides ?? {}),
+  };
+
   const saved: Record<string, string | undefined> = {};
-  for (const [k, v] of Object.entries(envOverrides ?? {})) {
+  for (const [k, v] of Object.entries(merged)) {
     saved[k] = process.env[k];
     process.env[k] = v;
   }

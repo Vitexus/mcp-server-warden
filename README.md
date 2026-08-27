@@ -273,8 +273,9 @@ you expose it.
 - **Use TLS for HTTP mode** - `X-BW-*` headers carry vault credentials
 - **Avoid env fallback on shared networks** - `KEYCHAIN_ALLOW_ENV_FALLBACK=true`
   makes server-side vault credentials available to headerless clients
-- **Use read-only mode when writes are not needed** - `READONLY=true` or
-  `KEYCHAIN_READONLY=true` hides mutating tools and rejects direct write calls
+- **Read-only mode is on by default** - hides mutating tools and rejects
+  direct write calls unless `READONLY=false` or `KEYCHAIN_READONLY=false` is
+  set explicitly
 - **Use no-reveal mode for untrusted agent contexts** - `NOREVEAL=true` or
   `KEYCHAIN_NOREVEAL=true` forces all secret-returning tools to stay redacted
 - **Keep debug logs off in production** - do not enable `KEYCHAIN_DEBUG_BW` or
@@ -302,7 +303,7 @@ password history entries.
 | `KEYCHAIN_BW_HOME_ROOT` | `${HOME}/bw-profiles` | root for per-profile `bw` state |
 | `KEYCHAIN_ALLOW_ENV_FALLBACK` | `false` | allow HTTP calls to inherit server `BW_*` env |
 | `KEYCHAIN_SYNC_ON_WRITE` | `true` | run `bw sync` before write operations |
-| `READONLY` / `KEYCHAIN_READONLY` | `false` | hide and reject mutating tools |
+| `READONLY` / `KEYCHAIN_READONLY` | `true` | hide and reject mutating tools; set `false` to allow writes |
 | `NOREVEAL` / `KEYCHAIN_NOREVEAL` | `false` | force `reveal: false` server-side |
 | `KEYCHAIN_TEXT_COMPAT_MODE` | unset | set `structured_json` for text-only clients |
 | `KEYCHAIN_SESSION_MAX_COUNT` | `32` | max tracked HTTP sessions |

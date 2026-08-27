@@ -173,3 +173,53 @@ test('READONLY=true hides and rejects mutating tools even when BW headers are pr
     await rm(bwHomeRoot, { recursive: true, force: true });
   }
 });
+
+test('READONLY unset defaults to read-only (fail-closed)', async () => {
+  const prev = process.env.READONLY;
+  delete process.env.READONLY;
+
+  const bwHomeRoot = await mkdtemp(
+    join(tmpdir(), 'keychain-readonly-default-'),
+  );
+  const app = createKeychainApp({ bwHomeRoot });
+  const httpServer = app.listen(0, '127.0.0.1');
+  await new Promise<void>((resolve) => httpServer.once('listening', resolve));
+
+  const addr = httpServer.address();
+  if (!addr || typeof addr === 'string') {
+    process.env.READONLY = prev;
+    await rm(bwHomeRoot, { recursive: true, force: true });
+    httpServer.close();
+    throw new Error('Unexpected server address');
+  }
+
+  const url = new URL(`http://127.0.0.1:${addr.port}/sse`);
+  const transport = new StreamableHTTPClientTransport(url);
+  const client = new Client(
+    { name: 'keychain-readonly-default-test', version: '0.0.0' },
+    { capabilities: {} },
+  );
+
+  try {
+    await client.connect(transport);
+
+    const tools = await client.listTools();
+    const names = tools.tools.map((x) => x.name);
+    assert.ok(!names.includes('keychain_create_note'));
+    assert.ok(!names.includes('keychain_delete_item'));
+
+    const res = await client.callTool({
+      name: 'keychain_create_note',
+      arguments: { name: 'x' },
+    });
+    assert.equal(res.isError, true);
+    const text = (res.content as Array<{ text: string }>)[0]?.text ?? '';
+    assert.ok(text.includes('not found'));
+  } finally {
+    process.env.READONLY = prev;
+    await transport.terminateSession().catch(() => {});
+    await transport.close().catch(() => {});
+    await new Promise<void>((resolve) => httpServer.close(() => resolve()));
+    await rm(bwHomeRoot, { recursive: true, force: true });
+  }
+});
