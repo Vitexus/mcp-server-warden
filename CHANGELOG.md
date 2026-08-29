@@ -1,5 +1,26 @@
 # Changelog
 
+## [0.2.34](https://github.com/icoretech/warden-mcp/compare/v0.2.33...v0.2.34) (2026-08-29)
+
+
+### Bug Fixes
+
+* port Bitwarden CLI 2026.8.0 compatibility to main ([7ea6e2a](https://github.com/icoretech/warden-mcp/commit/7ea6e2a270f9844767cc4b15d1d00c21e83df850))
+
+## [0.2.33](https://github.com/icoretech/warden-mcp/compare/v0.2.32...v0.2.33) (2026-08-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency zod to ^4.5.2 ([#158](https://github.com/icoretech/warden-mcp/issues/158)) ([ed4cf4f](https://github.com/icoretech/warden-mcp/commit/ed4cf4fe131313e696a6b268532d79330c5623a1))
+
+## [0.2.32](https://github.com/icoretech/warden-mcp/compare/v0.2.31...v0.2.32) (2026-08-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency zod to ^4.5.1 ([#156](https://github.com/icoretech/warden-mcp/issues/156)) ([cabfd44](https://github.com/icoretech/warden-mcp/commit/cabfd44eff0873126eca5564012456515bd75509))
+
 ## [0.2.31](https://github.com/icoretech/warden-mcp/compare/v0.2.30...v0.2.31) (2026-08-16)
 
 
