@@ -1,5 +1,58 @@
 # Changelog
 
+## [0.2.41](https://github.com/icoretech/warden-mcp/compare/v0.2.40...v0.2.41) (2026-09-14)
+
+
+### Bug Fixes
+
+* **release:** publish Vaultwarden image upgrades ([16a83e7](https://github.com/icoretech/warden-mcp/commit/16a83e7359ef5ad980e31e3509ecc9828a9c6a5b))
+
+## [0.2.40](https://github.com/icoretech/warden-mcp/compare/v0.2.39...v0.2.40) (2026-09-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency zod to ^4.6.5 ([#183](https://github.com/icoretech/warden-mcp/issues/183)) ([e87fbcc](https://github.com/icoretech/warden-mcp/commit/e87fbcc7e20502117040dc73f69cac9c38fcb68c))
+
+* **deps:** update vaultwarden/server docker tag to v1.37.3 ([#182](https://github.com/icoretech/warden-mcp/issues/182)) ([66fe11d](https://github.com/icoretech/warden-mcp/commit/66fe11d943641128907169a7d8730c9867e44076))
+
+## [0.2.39](https://github.com/icoretech/warden-mcp/compare/v0.2.38...v0.2.39) (2026-09-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency zod to ^4.6.4 ([#180](https://github.com/icoretech/warden-mcp/issues/180)) ([934f4f4](https://github.com/icoretech/warden-mcp/commit/934f4f4ee3cce68df19e6391dd2117f6e5fdccec))
+
+## [0.2.38](https://github.com/icoretech/warden-mcp/compare/v0.2.37...v0.2.38) (2026-09-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency zod to ^4.6.2 ([#178](https://github.com/icoretech/warden-mcp/issues/178)) ([11af473](https://github.com/icoretech/warden-mcp/commit/11af473c14b6fb89c3945ad69b3cb8fe010ae575))
+
+## [0.2.37](https://github.com/icoretech/warden-mcp/compare/v0.2.36...v0.2.37) (2026-09-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency zod to ^4.6.1 ([#175](https://github.com/icoretech/warden-mcp/issues/175)) ([e41380e](https://github.com/icoretech/warden-mcp/commit/e41380e73d914a0d3689d8017ed490523055f3c6))
+
+## [0.2.36](https://github.com/icoretech/warden-mcp/compare/v0.2.35...v0.2.36) (2026-09-02)
+
+
+### Bug Fixes
+
+* preserve shared Bitwarden sessions across processes ([19ff194](https://github.com/icoretech/warden-mcp/commit/19ff194893d7f88b174b6e40c4f7ced2b35ee612))
+* redact Bitwarden CLI failure details ([f48eb9b](https://github.com/icoretech/warden-mcp/commit/f48eb9b7be028c845fcad97d0cca51a4a656a518))
+* support Vaultwarden policies without revision dates ([342c77f](https://github.com/icoretech/warden-mcp/commit/342c77fbdc92efa72c562263f00a14f148adbc8d))
+
+## [0.2.35](https://github.com/icoretech/warden-mcp/compare/v0.2.34...v0.2.35) (2026-08-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency zod to ^4.5.4 ([#163](https://github.com/icoretech/warden-mcp/issues/163)) ([e942dc5](https://github.com/icoretech/warden-mcp/commit/e942dc51f3790431e27d7b2ae5a00d50cc9a1500))
+
 ## [0.2.34](https://github.com/icoretech/warden-mcp/compare/v0.2.33...v0.2.34) (2026-08-29)
 
 
