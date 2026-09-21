@@ -1,3 +1,11 @@
+mcp-server-warden (0.2.30-1) unstable; urgency=medium
+
+  * Rename package warden-mcp → mcp-server-warden
+    (Provides/Replaces/Breaks for clean apt upgrade).
+  * Update companion Depends and Vcs URLs for the GitHub rename.
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Mon, 21 Sep 2026 16:10:00 +0200
+
 warden-mcp (0.2.29) unstable; urgency=medium
 
   * Add companion package mcprack-mcp-server-warden: registers warden-

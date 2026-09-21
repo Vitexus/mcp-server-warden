@@ -1,4 +1,4 @@
-Source: warden-mcp
+Source: mcp-server-warden
 Section: net
 Priority: optional
 Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
@@ -10,16 +10,19 @@ Build-Depends:
 Standards-Version: 4.7.0
 Homepage: https://github.com/icoretech/warden-mcp
 Rules-Requires-Root: no
-Vcs-Git: https://github.com/Vitexus/warden-mcp.git
-Vcs-Browser: https://github.com/Vitexus/warden-mcp
+Vcs-Git: https://github.com/Vitexus/mcp-server-warden.git
+Vcs-Browser: https://github.com/Vitexus/mcp-server-warden
 
-Package: warden-mcp
+Package: mcp-server-warden
 Architecture: all
 Depends:
  ${misc:Depends},
  nodejs (>= 20),
 Suggests:
  bitwarden-cli,
+Provides: warden-mcp
+Replaces: warden-mcp (<< 0.2.30~)
+Breaks: warden-mcp (<< 0.2.30~)
 Description: Vaultwarden/Bitwarden MCP server for AI agents
  warden-mcp is a Model Context Protocol (MCP) server that lets AI agents
  interact with Vaultwarden or Bitwarden password vaults via the official
@@ -39,8 +42,8 @@ Architecture: all
 Depends:
  ${misc:Depends},
  mcprack (>= 1.5.1),
- warden-mcp (= ${binary:Version}),
+ mcp-server-warden (= ${binary:Version}),
 Description: Registers Vaultwarden/Bitwarden MCP server into mcprack catalog
- Companion package for warden-mcp. Installing it registers the
+ Companion package for mcp-server-warden. Installing it registers the
  warden-mcp binary (stdio mode) as an available MCP server in the
  local mcprack instance; removing it unregisters it again.
