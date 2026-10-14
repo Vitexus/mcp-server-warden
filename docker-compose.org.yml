@@ -3,7 +3,7 @@ name: keychain-mcp-org
 
 services:
   vaultwarden-org:
-    image: vaultwarden/server:1.37.3-alpine
+    image: vaultwarden/server:1.37.4-alpine
     environment:
       DOMAIN: https://vaultwarden-org-https
       SIGNUPS_ALLOWED: "true"
@@ -18,7 +18,7 @@ services:
       retries: 30
 
   vaultwarden-org-https:
-    image: caddy:2.11.4-alpine
+    image: caddy:2.11.7-alpine
     volumes:
       - ./Caddyfile.org.test:/etc/caddy/Caddyfile:ro
     depends_on:
@@ -26,7 +26,9 @@ services:
         condition: service_healthy
 
   bootstrap-org:
-    image: mcr.microsoft.com/playwright:v1.63.0-jammy
+    build:
+      context: .
+      dockerfile: Dockerfile.bootstrap
     working_dir: /work
     volumes:
       - .:/work

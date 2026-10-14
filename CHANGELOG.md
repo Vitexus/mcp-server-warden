@@ -1,5 +1,90 @@
 # Changelog
 
+## [0.2.53](https://github.com/icoretech/warden-mcp/compare/v0.2.52...v0.2.53) (2026-10-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency zod to ^4.6.7 ([#220](https://github.com/icoretech/warden-mcp/issues/220)) ([4365c3e](https://github.com/icoretech/warden-mcp/commit/4365c3e25f5adb695ad2f59fc874fd2eadafe824))
+
+## [0.2.52](https://github.com/icoretech/warden-mcp/compare/v0.2.51...v0.2.52) (2026-10-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependency zod to ^4.6.6 ([#218](https://github.com/icoretech/warden-mcp/issues/218)) ([35da897](https://github.com/icoretech/warden-mcp/commit/35da897f81c38dba8585ceff6a06433126160432))
+
+## [0.2.51](https://github.com/icoretech/warden-mcp/compare/v0.2.50...v0.2.51) (2026-10-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency express to ^5.3.0 ([#216](https://github.com/icoretech/warden-mcp/issues/216)) ([f64f3cb](https://github.com/icoretech/warden-mcp/commit/f64f3cbcfb3563a17450eb6958572f90a49078e5))
+
+## [0.2.50](https://github.com/icoretech/warden-mcp/compare/v0.2.49...v0.2.50) (2026-10-06)
+
+
+### Bug Fixes
+
+* **deps:** update vaultwarden/server docker tag to v1.37.4 ([#213](https://github.com/icoretech/warden-mcp/issues/213)) ([3e3c606](https://github.com/icoretech/warden-mcp/commit/3e3c60675fef18270b2bc302bb74b9f3e49b481a))
+
+## [0.2.49](https://github.com/icoretech/warden-mcp/compare/v0.2.48...v0.2.49) (2026-10-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @modelcontextprotocol/sdk to ^1.32.1 ([#210](https://github.com/icoretech/warden-mcp/issues/210)) ([60e1d42](https://github.com/icoretech/warden-mcp/commit/60e1d422e1d4203714a0d9a710e1bb45525d6a4f))
+
+## [0.2.48](https://github.com/icoretech/warden-mcp/compare/v0.2.47...v0.2.48) (2026-10-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @modelcontextprotocol/sdk to ^1.32.0 ([#207](https://github.com/icoretech/warden-mcp/issues/207)) ([b67071d](https://github.com/icoretech/warden-mcp/commit/b67071de6bdb5032321071dd1526ac6ebc25409f))
+
+## [0.2.47](https://github.com/icoretech/warden-mcp/compare/v0.2.46...v0.2.47) (2026-10-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @bitwarden/cli to v2026.9.1 ([#204](https://github.com/icoretech/warden-mcp/issues/204)) ([6aeecf5](https://github.com/icoretech/warden-mcp/commit/6aeecf570eb5bfb04c256e0b54e17b09a93f730d))
+
+## [0.2.46](https://github.com/icoretech/warden-mcp/compare/v0.2.45...v0.2.46) (2026-10-01)
+
+
+### Bug Fixes
+
+* redact native SSH private keys and vault item notes ([736e9f9](https://github.com/icoretech/warden-mcp/commit/736e9f987104d86e8c964f6b7a4bea3639f27844))
+
+## [0.2.45](https://github.com/icoretech/warden-mcp/compare/v0.2.44...v0.2.45) (2026-09-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @modelcontextprotocol/sdk to ^1.31.0 ([#198](https://github.com/icoretech/warden-mcp/issues/198)) ([f067260](https://github.com/icoretech/warden-mcp/commit/f067260afd1bee5acbed57061c96ad4e07b6971d))
+
+## [0.2.44](https://github.com/icoretech/warden-mcp/compare/v0.2.43...v0.2.44) (2026-09-24)
+
+
+### Bug Fixes
+
+* **bin:** convert CLI module paths to file URLs ([b1f188e](https://github.com/icoretech/warden-mcp/commit/b1f188ebd3be707de5e6dbff99feea58b1a1a037))
+* **deps:** update multer and align runtimes with Node 22 ([f9a4309](https://github.com/icoretech/warden-mcp/commit/f9a43091ecdae3b373707212bb7175c6034e0a9c))
+
+## [0.2.43](https://github.com/icoretech/warden-mcp/compare/v0.2.42...v0.2.43) (2026-09-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @modelcontextprotocol/sdk to ^1.30.1 ([fe8ca2a](https://github.com/icoretech/warden-mcp/commit/fe8ca2a1ea2d1cc887309e4c5a28803ad7921dfe))
+
+## [0.2.42](https://github.com/icoretech/warden-mcp/compare/v0.2.41...v0.2.42) (2026-09-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @bitwarden/cli to v2026.9.0 ([#190](https://github.com/icoretech/warden-mcp/issues/190)) ([7531205](https://github.com/icoretech/warden-mcp/commit/7531205f0315d5d1d64f23af203edff0f2316e95))
+
 ## [0.2.41](https://github.com/icoretech/warden-mcp/compare/v0.2.40...v0.2.41) (2026-09-14)
 
 

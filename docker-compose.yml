@@ -2,7 +2,7 @@ name: keychain-mcp
 
 services:
   vaultwarden:
-    image: vaultwarden/server:1.37.3-alpine
+    image: vaultwarden/server:1.37.4-alpine
     ports:
       - "8080:80"
     environment:
@@ -22,7 +22,7 @@ services:
       retries: 30
 
   vaultwarden-https:
-    image: caddy:2.11.4-alpine
+    image: caddy:2.11.7-alpine
     ports:
       - "8443:443"
     volumes:
@@ -58,7 +58,9 @@ services:
         condition: service_healthy
 
   bootstrap:
-    image: mcr.microsoft.com/playwright:v1.63.0-jammy
+    build:
+      context: .
+      dockerfile: Dockerfile.bootstrap
     working_dir: /work
     volumes:
       - .:/work

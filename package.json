@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@icoretech/warden-mcp",
-  "version": "0.2.41",
+  "version": "0.2.53",
   "type": "module",
   "license": "MIT",
   "description": "Vaultwarden/Bitwarden MCP server backed by Bitwarden CLI (bw).",
@@ -44,21 +44,22 @@
     "lint": "biome check --write --assist-enabled=true . && tsc --noEmit"
   },
   "dependencies": {
-    "@bitwarden/cli": "2026.8.0",
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "express": "^5.2.1",
-    "zod": "^4.6.5"
+    "@bitwarden/cli": "2026.9.1",
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "express": "^5.3.0",
+    "zod": "^4.6.7"
   },
   "overrides": {
     "form-data": "4.0.6",
+    "multer": "2.4.0",
     "tmp": "0.2.7"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.13",
+    "@biomejs/biome": "^2.5.15",
     "@types/express": "^5.0.6",
-    "@types/node": "^26.5.1",
+    "@types/node": "^22.20.5",
     "playwright": "1.63.0",
-    "tsx": "^4.23.13",
+    "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   },
   "publishConfig": {
@@ -66,7 +67,7 @@
     "access": "public"
   },
   "engines": {
-    "node": "~22",
+    "node": "~22.23.3",
     "npm": "~10.9.9"
   }
 }
