@@ -4,3 +4,9 @@ set -e
 warden-mcp --version 2>&1 || true
 node /usr/lib/warden-mcp/bin/warden-mcp.js --help 2>&1 || true
 echo "warden-mcp binary present: OK"
+
+# MCP-level smoke via the mcprack CLI: handshake + tools/resources/prompts list
+# (dummy BW_* values - the stdio transport only validates their presence at
+# startup; no vault is contacted by a tools/list call)
+BW_HOST=http://127.0.0.1:1 BW_PASSWORD=dummy BW_CLIENTID=dummy BW_CLIENTSECRET=dummy \
+  mcprack server probe /usr/bin/warden-mcp --stdio

@@ -41,7 +41,7 @@ Package: mcprack-mcp-server-warden
 Architecture: all
 Depends:
  ${misc:Depends},
- mcprack (>= 1.5.1),
+ mcprack (>= 1.6.0),
  mcp-server-warden (= ${binary:Version}),
 Description: Registers Vaultwarden/Bitwarden MCP server into mcprack catalog
  Companion package for mcp-server-warden. Installing it registers the
